@@ -1,0 +1,205 @@
+--[[ 
+    SyntaxError Exploit Hub
+    Fully functional script hub + executor
+    Only works in Roblox exploit environments
+--]]
+
+-- // Variables
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local scriptNames = {
+    "Lnicky","Infinite Yield","1x1x1x1","SyntaxError Private GUI","Synapse X","SSP",
+    "Epik R6 Dancezz","GhostHub","Client Sided GUI","ChatHax","Barry Prison FE TROLL",
+    "g00byd0lan","HARKED REBORN V2","Lalol Hub","Bany Side","Dex","SCP-096","Black Hole",
+    "Sonic.exe","Brookhaven SS","Sypcerr","Fly GUI v3","c00lgui","FE Bypass","Energize"
+}
+
+local scriptURLs = {
+    "https://rawscripts.net/raw/Universal-Script-LNicky-Ultimate-F3X-Gui-42094",
+    "https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt",
+    "https://rawscripts.net/raw/Universal-Script-1x1x1x1-gui-f3x-and-hd-admin-41931",
+    "https://raw.githubusercontent.com/a33bd/egwgs/refs/heads/main/he",
+    "https://raw.githubusercontent.com/AZYsGithub/Chillz-s-scripts/main/Synapse-X-Remake.lua",
+    "https://pastefy.app/t2gUwfXy/raw",
+    "https://rawscripts.net/raw/Universal-Script-Epik-R6-Dancezz-42246",
+    "https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub",
+    "https://pastefy.app/kVLBGCjG/raw",
+    "https://pastefy.app/8XhIoZYX/raw",
+    "https://pastebin.com/raw/a71y69Gr",
+    "https://rawscripts.net/raw/Universal-Script-g00byd0lan-f3x-10362",
+    "https://rawscripts.net/raw/Live-Life-Rich-and-Famous-in-Paradise!-harked-that-only-work-for-this-game-8800",
+    "https://rawscripts.net/raw/Universal-Script-Lalol-hub-30354",
+    "https://rawscripts.net/raw/Universal-Script-Bany-side-28741",
+    "https://rawscripts.net/raw/Universal-Script-REAL-DEX-EXPLORER-DONT-BE-SCAMMED-41800",
+    "https://pastefy.app/YsJgITXR/raw",
+    "https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers",
+    "https://pastefy.app/jRSu2UQR/raw",
+    "https://scriptblox.com/raw/Brookhaven-RP-R4D-TROLL-NO-KEY-17625",
+    "https://raw.githubusercontent.com/sypcerr/FECollection/refs/heads/main/script.lua",
+    "https://rawscripts.net/raw/Universal-Script-Gui-Fly-v3-37111",
+    "https://rawscripts.net/raw/Universal-Script-C00lgui-f3x-9682",
+    "https://pastebin.com/raw/DxMwPkXH",
+    "https://rawscripts.net/raw/a-literal-baseplate.-energize-gui-24798"
+}
+
+-- // Create GUI
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "SyntaxErrorHub"
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+gui.ResetOnSpawn = false
+
+-- Main frame
+local mainFrame = Instance.new("Frame", gui)
+mainFrame.Size = UDim2.new(0, 650, 0, 400)
+mainFrame.Position = UDim2.new(0.3, 0, 0.25, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mainFrame.BorderSizePixel = 2
+mainFrame.BorderColor3 = Color3.fromRGB(145, 0, 255)
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Top bar
+local topBar = Instance.new("Frame", mainFrame)
+topBar.Size = UDim2.new(1, 0, 0, 30)
+topBar.BackgroundColor3 = Color3.fromRGB(20, 0, 50)
+
+local title = Instance.new("TextLabel", topBar)
+title.Size = UDim2.new(0.5, 0, 1, 0)
+title.Position = UDim2.new(0, 5, 0, 0)
+title.Text = "SyntaxError - Private Hub"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 20
+title.BackgroundTransparency = 1
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Close button
+local closeBtn = Instance.new("TextButton", topBar)
+closeBtn.Size = UDim2.new(0, 30, 0, 30)
+closeBtn.Position = UDim2.new(1, -35, 0, 0)
+closeBtn.Text = "X"
+closeBtn.Font = Enum.Font.SourceSansBold
+closeBtn.TextSize = 20
+closeBtn.TextColor3 = Color3.new(1, 0, 0)
+closeBtn.BackgroundColor3 = Color3.fromRGB(40, 0, 0)
+closeBtn.MouseButton1Click:Connect(function()
+    gui:Destroy()
+end)
+
+-- Tab buttons frame
+local tabBar = Instance.new("Frame", mainFrame)
+tabBar.Size = UDim2.new(0, 150, 0, 370)
+tabBar.Position = UDim2.new(0, 0, 0, 30)
+tabBar.BackgroundColor3 = Color3.fromRGB(10, 0, 20)
+
+-- Container for content
+local contentFrame = Instance.new("Frame", mainFrame)
+contentFrame.Size = UDim2.new(0, 500, 0, 370)
+contentFrame.Position = UDim2.new(0, 150, 0, 30)
+contentFrame.BackgroundColor3 = Color3.fromRGB(15, 0, 30)
+
+-- // Tab switching system
+local pages = {}
+local function switchTo(tab)
+    for name, frame in pairs(pages) do
+        frame.Visible = (name == tab)
+    end
+end
+
+-- // Home tab
+local homePage = Instance.new("Frame", contentFrame)
+homePage.Size = UDim2.new(1, 0, 1, 0)
+homePage.BackgroundTransparency = 1
+pages["Home"] = homePage
+
+local userInfo = Instance.new("TextLabel", homePage)
+userInfo.Size = UDim2.new(1, 0, 0, 50)
+userInfo.Text = "Welcome, " .. player.Name .. " | Account Age: " .. player.AccountAge .. " days"
+userInfo.Font = Enum.Font.SourceSans
+userInfo.TextSize = 20
+userInfo.TextColor3 = Color3.new(1, 1, 1)
+userInfo.BackgroundTransparency = 1
+
+-- // Scripts tab
+local scriptsPage = Instance.new("ScrollingFrame", contentFrame)
+scriptsPage.Size = UDim2.new(1, 0, 1, 0)
+scriptsPage.CanvasSize = UDim2.new(0, 0, 0, #scriptNames * 40)
+scriptsPage.ScrollBarThickness = 8
+scriptsPage.BackgroundTransparency = 1
+pages["Scripts"] = scriptsPage
+
+for i, name in ipairs(scriptNames) do
+    local btn = Instance.new("TextButton", scriptsPage)
+    btn.Size = UDim2.new(1, -10, 0, 30)
+    btn.Position = UDim2.new(0, 5, 0, (i - 1) * 35)
+    btn.Text = name
+    btn.Font = Enum.Font.SourceSansBold
+    btn.TextSize = 18
+    btn.BackgroundColor3 = Color3.fromRGB(30, 0, 60)
+    btn.TextColor3 = Color3.new(1,1,1)
+    btn.MouseButton1Click:Connect(function()
+        loadstring(game:HttpGet(scriptURLs[i]))()
+    end)
+end
+
+-- // Executor tab
+local execPage = Instance.new("Frame", contentFrame)
+execPage.Size = UDim2.new(1, 0, 1, 0)
+execPage.BackgroundTransparency = 1
+pages["Executor"] = execPage
+
+local execBox = Instance.new("TextBox", execPage)
+execBox.Size = UDim2.new(1, -20, 0, 250)
+execBox.Position = UDim2.new(0, 10, 0, 10)
+execBox.MultiLine = true
+execBox.Font = Enum.Font.Code
+execBox.TextSize = 16
+execBox.TextColor3 = Color3.new(1, 1, 1)
+execBox.BackgroundColor3 = Color3.fromRGB(20, 0, 40)
+execBox.Text = "-- Type script here"
+
+local execBtn = Instance.new("TextButton", execPage)
+execBtn.Size = UDim2.new(0, 100, 0, 30)
+execBtn.Position = UDim2.new(0, 10, 0, 270)
+execBtn.Text = "Execute"
+execBtn.Font = Enum.Font.SourceSansBold
+execBtn.TextSize = 18
+execBtn.BackgroundColor3 = Color3.fromRGB(40, 0, 80)
+execBtn.TextColor3 = Color3.new(1,1,1)
+execBtn.MouseButton1Click:Connect(function()
+    pcall(function()
+        loadstring(execBox.Text)()
+    end)
+end)
+
+local clearBtn = Instance.new("TextButton", execPage)
+clearBtn.Size = UDim2.new(0, 100, 0, 30)
+clearBtn.Position = UDim2.new(0, 120, 0, 270)
+clearBtn.Text = "Clear"
+clearBtn.Font = Enum.Font.SourceSansBold
+clearBtn.TextSize = 18
+clearBtn.BackgroundColor3 = Color3.fromRGB(80, 0, 40)
+clearBtn.TextColor3 = Color3.new(1,1,1)
+clearBtn.MouseButton1Click:Connect(function()
+    execBox.Text = ""
+end)
+
+-- // Tab buttons
+local tabNames = {"Home", "Scripts", "Executor"}
+for i, tab in ipairs(tabNames) do
+    local tbtn = Instance.new("TextButton", tabBar)
+    tbtn.Size = UDim2.new(1, -10, 0, 30)
+    tbtn.Position = UDim2.new(0, 5, 0, (i - 1) * 35 + 5)
+    tbtn.Text = tab
+    tbtn.Font = Enum.Font.SourceSansBold
+    tbtn.TextSize = 18
+    tbtn.BackgroundColor3 = Color3.fromRGB(30, 0, 60)
+    tbtn.TextColor3 = Color3.new(1,1,1)
+    tbtn.MouseButton1Click:Connect(function()
+        switchTo(tab)
+    end)
+end
+
+-- Show Home tab by default
+switchTo("Home")
