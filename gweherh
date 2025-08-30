@@ -207,11 +207,11 @@ pages[3] = {
 }
 -- Page 4 is the same as Page 1
 pages[4] = {
-    makeBtn("FLY", 0.27, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt", true))() end),
-    makeBtn("FLING", 0.42, function() loadstring(game:HttpGet("https://pastebin.com/raw/VynRhxJV"))() end),
-    makeBtn("ORBIT PART", 0.57, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol", true))() end),
-    makeBtn("ADMIN'S GUI", 0.72, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau", true))() end),
-    makeBtn("BLACK HOLE", 0.87, function() loadstring(game:HttpGet("https://pastebin.com/raw/Ax87RCd5", true))() end)
+    makeBtn("Lalol Hub Backdoor", 0.27, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script", true))() end),
+    makeBtn("LSF4HACKED Script Hub", 0.42, function() loadstring(game:HttpGet(https://pastebin.com/raw/FxgT51MA"))() end),
+    makeBtn("Coming Soon", 0.57, function() loadstring(game:HttpGet("", true))() end),
+    makeBtn("Coming Soon", 0.72, function() loadstring(game:HttpGet("", true))() end),
+    makeBtn("Coming Soon", 0.87, function() loadstring(game:HttpGet("", true))() end)
 }
 
 -- Hide pages except page 1
