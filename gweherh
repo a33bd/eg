@@ -200,8 +200,8 @@ pages[2] = {
 
 pages[3] = {
     makeBtn("INF YIELD", 0.27, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))() end),
-    makeBtn("Syntax Private HUB", 0.42, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/a33bd/eg/refs/heads/main/gws", true))() end),
-    makeBtn("Coming soon", 0.57, function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))() end)
+    makeBtn("SyntaxError Private HUB", 0.42, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/a33bd/eg/refs/heads/main/gws", true))() end),
+    makeBtn("Rizz Trip", 0.57, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/0%20Graviy%20Trip%20Universal", true))() end),
     makeBtn("Yeet Gui", 0.72, function() loadstring(game:HttpGet("https://pastebin.com/raw/0sPxQtXp"))() end),
     makeBtn("Troll", 0.87, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))() end)
 }
