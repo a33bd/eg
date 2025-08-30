@@ -207,17 +207,17 @@ pages[3] = {
 }
 -- Page 4 is the same as Page 1
 pages[4] = {
-    makeBtn("Lalol Hub Backdoor", 0.27, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script", true))() end),
-    makeBtn("LSF4HACKED Script Hub", 0.42, function() loadstring(game:HttpGet(https://pastebin.com/raw/FxgT51MA"))() end),
-    makeBtn("Coming Soon", 0.57, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frosteen/Roblox_LUA_Weapon_Scripts/refs/heads/main/Arm%20Rocket.lua", true))() end),
-    makeBtn("Coming Soon", 0.72, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frosteen/Roblox_LUA_Weapon_Scripts/refs/heads/main/Chop%20Chop.lua", true))() end),
-    makeBtn("Coming Soon", 0.87, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frosteen/Roblox_LUA_Weapon_Scripts/refs/heads/main/DSword.lua", true))() end)
+    makeBtn("LSF4HACKED Script Hub", 0.27, function() loadstring(game:HttpGet("https://pastebin.com/raw/FxgT51MA", true))() end),
+    makeBtn("Backdoor Scanner", 0.42, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))() end),
+    makeBtn("Coming Soon..", 0.57, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol", true))() end),
+    makeBtn("Coming Soon..", 0.72, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau", true))() end),
+    makeBtn("Coming Soon..", 0.87, function() loadstring(game:HttpGet("https://pastebin.com/raw/Ax87RCd5", true))() end)
 }
-
 -- Hide pages except page 1
 for _, btn in ipairs(pages[2]) do btn.Visible = false end
 for _, btn in ipairs(pages[3]) do btn.Visible = false end
 for _, btn in ipairs(pages[4]) do btn.Visible = false end
+
 -- Page label
 local PageLabel = Instance.new("TextLabel")
 PageLabel.Size = UDim2.new(0, 60, 0, 22)
