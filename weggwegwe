@@ -204,9 +204,10 @@ pages[3] = {
     makeBtn("Rizz Trip", 0.57, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/0%20Graviy%20Trip%20Universal", true))() end),
     makeBtn("Yeet Gui", 0.72, function() loadstring(game:HttpGet("https://pastebin.com/raw/0sPxQtXp"))() end),
     makeBtn("Troll", 0.87, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))() end),
-    makeBtn("Troll", 0.143, function() loadstring(game:HttpGet("https://pastebin.com/raw/J2kja3eA"))() end)
 }
-
+pages[4] = {
+    makeBtn("Gamepass Spoofer", 0.27, function() loadstring(game:HttpGet("https://pastebin.com/raw/J2kja3eA"))() end)
+}
 -- Hide pages except page 1
 for _, btn in ipairs(pages[2]) do btn.Visible = false end
 for _, btn in ipairs(pages[3]) do btn.Visible = false end
